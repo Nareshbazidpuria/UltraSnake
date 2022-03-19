@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Snake</title>
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+    <div id="body">
+        <div id="home">
+            <button id="playGame" class="btn">Play</button>
+            <button id="settings" class="btn">Settings</button>
+        </div>
+        <div id="ground"></div>
+        <div id="arrBtn">
+            <div><button id="moveUpBtn" class="arrBtncls">Up</button></div>
+            <div>
+                <button id="moveLeftBtn" class="arrBtncls">Left</button>
+                <button id="playBtnForMobile" class="arrBtncls">Play</button>
+                <button id="moveRightBtn" class="arrBtncls">Right</button>
+            </div>
+            <div><button id="moveDownBtn" class="arrBtncls">Down</button></div>
+        </div>
+    </div>
+
+    <div id="setting" class="popup">
+        <h3>Settings</h3>
+        <ul>
+            <li id="level" class="liStyle">Level</li>
+            <li id="sound" class="liStyle">Sound</li>
+        </ul>
+    </div>
+
+    <div id="levelUl" class="levelUl popup">
+        <ul id="levelul">
+            <li class="liStyle levels">Easy</li>
+            <li class="liStyle levels">Medium</li>
+            <li class="liStyle levels">Hard</li>
+        </ul>
+    </div>
+
+    <div id="soundUl" class="soundUl popup">
+        <ul>
+            <li id="soundOn" class="liStyle">On</li>
+            <li id="soundOff" class="liStyle">Off</li>
+        </ul>
+    </div>
+
+    <div id="scoreEle" class="scoreEle"></div>
+    <div id="hiScoreEle" class="scoreEle">High Score : 0</div>
+    <button id="quit" class="btn">Quit</button>
+    <button id="settingSec" class="btn">Settings</button>
+    <div id="pressBtn" class="popup">Press Any Key to Start</div>
+    <div id="goverSec" class="popup">
+        <h2>Game Over</h2>
+        <h5 id="yourScore"></h5>
+        <button id="plAgain" class="btn">Play Again</button><button id="secondQuit" class="btn">Quit</button>
+    </div>
+
+    <script src="js/snake.js"></script>
+    <script src="js/res.js"></script>
+</body>
+
+</html>

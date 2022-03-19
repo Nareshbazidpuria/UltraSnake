@@ -1,0 +1,198 @@
+@media only screen and (max-width: 600px) {
+    #body{
+        background: url(../img/phbg.jpg) no-repeat;
+        min-height: 100vh;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .btn{
+        font-size: 1.3rem;
+        margin: 0.4rem 0;
+        outline: none;
+        background: linear-gradient(45deg, #004fffb5, #ff00efa8);
+        border: none;
+        padding: 5px 50px;
+        color: #fbffa9;
+        cursor: pointer;
+        border-radius: 500px;
+        font-family: 'Indie Flower', cursive;
+        font-weight: bolder;
+        border: 1px solid;
+        animation: borderBlink 0.2s ease-in-out infinite;
+    }
+    @keyframes borderBlink {
+        0%{border-color: red;}
+        50%{border-color: yellow;}
+        100%{border-color: red;}
+    }
+    .btn:hover{
+        background: linear-gradient(45deg, #ff00eed5, #0051ffd3);
+    }
+    .popup{
+        z-index: 10;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.493), -2px -2px 3px rgba(0, 0, 0, 0.486), -2px 2px 3px rgba(0, 0, 0, 0.493), 2px -2px 3px rgba(0, 0, 0, 0.486);
+        font-family: 'Josefin Sans', sans-serif;
+        text-align: center;
+        font-size: 1.3rem;
+        display: none;
+    }
+    #setting h3{
+        border-bottom: 1px solid grey;
+        padding: 20px 50px;
+        cursor: default;
+    }
+    
+    .levelUl{
+        display: none;
+    }
+    .soundUl{
+        display: none;
+    }
+    
+    .liStyle{
+        list-style: none;
+        cursor: pointer;
+        padding: 10px 100px;
+    }
+    .liStyle:hover{
+        background-color: rgb(235, 235, 235);
+    }
+    
+    #ground{
+        display: none;
+        background: linear-gradient(#feffbcf5, #5fff54f1);
+        height: 50vh;
+        border: 2px solid #4dff45;
+        width: 95vw;
+        grid-template-rows: repeat(25, 1fr);
+        grid-template-columns: repeat(30, 1fr);
+    }
+    #pressBtn{
+        transition: 0.5s ease-in-out;
+        display: none !important;
+        z-index: 1;
+        padding: 10px 3px;
+    }
+    .scoreEle{
+        display: none;
+        position: absolute;
+        font-family: 'Satisfy', cursive;
+        font-size: 2rem;
+        padding: 3px 17px;
+        background-color: rgba(255, 255, 255, 0.822);
+        border-radius: 10rem;
+    }
+    #scoreEle{
+        display: none;
+        top: 2%;
+        right: 2%;
+    }
+    #hiScoreEle{
+        display: none;
+        top: 10%;
+        right: 2%;
+    }
+    #quit{
+        display: none !important;
+        position: absolute;
+        bottom: 10%;
+        right: 6%;
+    }
+    #settingSec{
+        display: none !important;
+        position: absolute;
+        bottom: 20%;
+        right: 4.7%;
+    }
+    .snake{
+        background: radial-gradient(rgb(235, 240, 172), rgb(2, 69, 255));
+        border-radius: 12px;
+    }
+    .snakeHead{
+        background: radial-gradient(rgb(255, 0, 0), rgb(255, 255, 255));
+        display: flex;
+        border-radius: 40%;
+        justify-content: center;
+        transform: scale(1.1);
+    }
+    .tail{
+        background: radial-gradient(rgb(235, 240, 172), rgb(2, 69, 255));
+        border-radius: 12px;
+        transform: scale(0.8);
+    }
+    .eye{
+        display: none;
+        background-color: black;
+        color: white;
+        height: 25%;
+        width: 25%;
+        margin: 20% 10%;
+        border-radius: 50%;
+    
+    }
+    .food{
+        background: radial-gradient(rgb(255, 255, 255), rgb(0, 238, 255) , rgb(255, 145, 0));
+        border-radius: 500px;
+        animation: blink 0.2s ease-in-out infinite;
+    }
+    @keyframes blink {
+        0%{ opacity: 1;}
+        50%{ opacity: 0;}
+        100%{ opacity: 1;}
+    }
+    #goverSec{
+        display: none;
+        padding: 40px;
+    }
+    #yourScore{
+        margin: 20px 0;
+    }
+    
+    #goverSec button{
+        margin: 40px 15px 0 15px;
+    }
+    settingSec{
+        display: none !important;
+    }
+    #arrBtn{
+        position: absolute;
+        bottom: 1rem;
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .arrBtncls{
+        display: none;
+        background: linear-gradient(45deg, #ff00eed5, #0051ffd3);
+        margin: .2rem;
+        padding: .3rem;
+        height: 2.7rem;
+        width: 5rem;
+        text-align: center;
+        color: aliceblue;
+        border: none;
+        border-radius: .3rem
+        ;
+    }
+    #plAgain{
+        padding: 0.4rem 1rem;
+        margin: 5px 0 !important;
+        width: 40vw;
+    }
+    #secondQuit{
+        padding: 0.4rem 1rem;
+        margin: 5px 0 !important;
+        width: 40vw;
+    }
+    
+}

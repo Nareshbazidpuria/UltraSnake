@@ -29,7 +29,7 @@ if (screen.width <= 600) {
         goverSec.style.display = "none";
         home.style.display = "none";
         ground.style.display = "grid";
-        scoreEle.style.display = "block";
+        scoreEle.style.display = "table";
         hiScoreEle.style.display = "block";
         let arrBtncls = document.getElementsByClassName('arrBtncls');
         Array.from(arrBtncls).forEach(element => {
@@ -81,6 +81,7 @@ if (screen.width <= 600) {
                 // Game Over  /////////////////////////////////////////////////////////////////////////////////////
                 yourScore.innerHTML = `Your Score : ${score}`;
                 goverSec.style.display = "block";
+                ground.style.display = "none";
                 Array.from(arrBtncls).forEach(element => {
                     element.style.display = 'none';
                 });

@@ -68,6 +68,8 @@
     
     #ground{
         display: none;
+        position: relative;
+        bottom: 4rem;
         background: linear-gradient(#feffbcf5, #5fff54f1);
         height: 50vh;
         border: 2px solid #4dff45;
@@ -93,12 +95,16 @@
     #scoreEle{
         display: none;
         top: 2%;
-        right: 2%;
+        left: 2%;
+        max-width: 40%;
+        font-size: 1rem;
     }
     #hiScoreEle{
         display: none;
-        top: 10%;
+        top: 2%;
         right: 2%;
+        max-width: 40%;
+        font-size: 1rem;
     }
     #quit{
         display: none !important;

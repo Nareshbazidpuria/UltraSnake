@@ -81,6 +81,9 @@ if (screen.width <= 600) {
                 // Game Over  /////////////////////////////////////////////////////////////////////////////////////
                 yourScore.innerHTML = `Your Score : ${score}`;
                 goverSec.style.display = "block";
+                Array.from(arrBtncls).forEach(element => {
+                    element.style.display = 'none';
+                });
                 setTimeout(() => {
                     snakeArr = [{ x: 1, y: 1 }];
                     score = 0;

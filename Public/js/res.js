@@ -169,136 +169,45 @@ if (screen.width <= 600) {
 
         // Main Logic of the game  /////////////////////////////////////////////////////////////////////////////////
         window.requestAnimationFrame(main);
-
-
-
         playBtnForMobile.addEventListener('click', (e) => {
             goverSec.style.display = "none";
             playBtnForMobile.style.display = "none";
             inputDir = { x: 1, y: 0 }   //start the game
             //play();
 
-            ground.addEventListener('load', function () {
-                var el = ground;
-                swipedetect(el, function (swipedir) {
-                    if (swipedir != 'none') {
-                        clearTimeout(hidetimer)
-                        switch (swipedir) {
-                            case 'up':
-                                inputDir.x = 0;
-                                inputDir.y = -1;
-                                if (soundOnOff === 'On') {
-                                    turnSound.play();
-                                }
-                                break;
-                            case 'down':
-                                inputDir.x = 0;
-                                inputDir.y = 1;
-                                if (soundOnOff === 'On') {
-                                    turnSound.play();
-                                }
-                                break;
-                            case 'left':
-                                inputDir.x = -1;
-                                inputDir.y = 0;
-                                if (soundOnOff === 'On') {
-                                    turnSound.play();
-                                }
-    
-                                break;
-                            case 'right':
-                                inputDir.x = 1;
-                                inputDir.y = 0;
-                                if (soundOnOff === 'On') {
-                                    turnSound.play();
-                                }
-    
-    
-                                break;
-    
-                            default:
-                                break;
-                        }
-                    }
-                })
-            }, false)
+            moveUpBtn.addEventListener('click', ()=>{
+                inputDir.x = 0;
+                inputDir.y = -1;
+                if (soundOnOff === 'On') {
+                    turnSound.play();
+                }
 
+            })
+            moveDownBtn.addEventListener('click', ()=>{
+                inputDir.x = 0;
+                inputDir.y = 1;
+                if (soundOnOff === 'On') {
+                    turnSound.play();
+                }
 
+            })
+            moveLeftBtn.addEventListener('click', ()=>{
+                inputDir.x = -1;
+                inputDir.y = 0;
+                if (soundOnOff === 'On') {
+                    turnSound.play();
+                }
 
-           
-            function swipedetect(el, callback) {
-    
-                var touchsurface = el,
-                    swipedir,
-                    startX,
-                    startY,
-                    distX,
-                    distY,
-                    threshold = 25, //required min distance traveled to be considered swipe
-                    restraint = 30, // maximum distance allowed at the same time in perpendicular direction
-                    allowedTime = 300, // maximum time allowed to travel that distance
-                    elapsedTime,
-                    startTime,
-                    handleswipe = callback || function (swipedir) { }
-    
-                touchsurface.addEventListener('touchstart', function (e) {
-                    var touchobj = e.changedTouches[0]
-                    swipedir = 'none'
-                    dist = 0
-                    startX = touchobj.pageX
-                    startY = touchobj.pageY
-                    startTime = new Date().getTime() // record time when finger first makes contact with surface
-                    e.preventDefault()
-                }, false)
-    
-                touchsurface.addEventListener('touchmove', function (e) {
-                    e.preventDefault() // prevent scrolling when inside DIV
-                }, false)
-    
-                touchsurface.addEventListener('touchend', function (e) {
-                    var touchobj = e.changedTouches[0]
-                    distX = touchobj.pageX - startX // get horizontal dist traveled by finger while in contact with surface
-                    distY = touchobj.pageY - startY // get vertical dist traveled by finger while in contact with surface
-                    elapsedTime = new Date().getTime() - startTime // get time elapsed
-                    if (elapsedTime <= allowedTime) { // first condition for awipe met
-                        if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) { // 2nd condition for horizontal swipe met
-                            swipedir = (distX < 0) ? 'left' : 'right' // if dist traveled is negative, it indicates left swipe
-                        }
-                        else if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint) { // 2nd condition for vertical swipe met
-                            swipedir = (distY < 0) ? 'up' : 'down' // if dist traveled is negative, it indicates up swipe
-                        }
-                    }
-                    handleswipe(swipedir)
-                    e.preventDefault()
-                }, false)
-            }
+            })
+            moveRightBtn.addEventListener('click', ()=>{
+                inputDir.x = 1;
+                inputDir.y = 0;
+                if (soundOnOff === 'On') {
+                    turnSound.play();
+                }
+
+            })
         })
-
-
-
-
-
-
-
-
-       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         quit.addEventListener('click', () => {
             location.reload();

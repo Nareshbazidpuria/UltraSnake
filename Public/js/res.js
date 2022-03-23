@@ -178,7 +178,7 @@ if (screen.width <= 600) {
             inputDir = { x: 1, y: 0 }   //start the game
             //play();
 
-            window.addEventListener('load', function () {
+            // window.addEventListener('load', function () {
                 var el = ground;
                 swipedetect(el, function (swipedir) {
                     if (swipedir != 'none') {
@@ -221,7 +221,7 @@ if (screen.width <= 600) {
                         }
                     }
                 })
-            }, false)
+            // }, false)
 
            
         })

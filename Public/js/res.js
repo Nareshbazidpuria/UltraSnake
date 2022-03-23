@@ -172,97 +172,68 @@ if (screen.width <= 600) {
 
 
 
-        // playBtnForMobile.addEventListener('click', (e) => {
-        //     goverSec.style.display = "none";
-        //     playBtnForMobile.style.display = "none";
-        //     inputDir = { x: 1, y: 0 }   //start the game
-        //     //play();
+        playBtnForMobile.addEventListener('click', (e) => {
+            goverSec.style.display = "none";
+            playBtnForMobile.style.display = "none";
+            inputDir = { x: 1, y: 0 }   //start the game
+            //play();
 
-        //     moveUpBtn.addEventListener('click', ()=>{
-        //         inputDir.x = 0;
-        //         inputDir.y = -1;
-        //         if (soundOnOff === 'On') {
-        //             turnSound.play();
-        //         }
-
-        //     })
-        //     moveDownBtn.addEventListener('click', ()=>{
-        //         inputDir.x = 0;
-        //         inputDir.y = 1;
-        //         if (soundOnOff === 'On') {
-        //             turnSound.play();
-        //         }
-
-        //     })
-        //     moveLeftBtn.addEventListener('click', ()=>{
-        //         inputDir.x = -1;
-        //         inputDir.y = 0;
-        //         if (soundOnOff === 'On') {
-        //             turnSound.play();
-        //         }
-
-        //     })
-        //     moveRightBtn.addEventListener('click', ()=>{
-        //         inputDir.x = 1;
-        //         inputDir.y = 0;
-        //         if (soundOnOff === 'On') {
-        //             turnSound.play();
-        //         }
-
-        //     })
-        // })
-
-
-
-
-
-
-
-
-        window.addEventListener('load', function () {
-            var el = ground;
-            swipedetect(el, function (swipedir) {
-                if (swipedir != 'none') {
-                    clearTimeout(hidetimer)
-                    switch (swipedir) {
-                        case 'up':
-                            inputDir.x = 0;
-                            inputDir.y = -1;
-                            if (soundOnOff === 'On') {
-                                turnSound.play();
-                            }
-                            break;
-                        case 'down':
-                            inputDir.x = 0;
-                            inputDir.y = 1;
-                            if (soundOnOff === 'On') {
-                                turnSound.play();
-                            }
-                            break;
-                        case 'left':
-                            inputDir.x = -1;
-                            inputDir.y = 0;
-                            if (soundOnOff === 'On') {
-                                turnSound.play();
-                            }
-
-                            break;
-                        case 'right':
-                            inputDir.x = 1;
-                            inputDir.y = 0;
-                            if (soundOnOff === 'On') {
-                                turnSound.play();
-                            }
-
-
-                            break;
-
-                        default:
-                            break;
+            window.addEventListener('load', function () {
+                var el = ground;
+                swipedetect(el, function (swipedir) {
+                    if (swipedir != 'none') {
+                        clearTimeout(hidetimer)
+                        switch (swipedir) {
+                            case 'up':
+                                inputDir.x = 0;
+                                inputDir.y = -1;
+                                if (soundOnOff === 'On') {
+                                    turnSound.play();
+                                }
+                                break;
+                            case 'down':
+                                inputDir.x = 0;
+                                inputDir.y = 1;
+                                if (soundOnOff === 'On') {
+                                    turnSound.play();
+                                }
+                                break;
+                            case 'left':
+                                inputDir.x = -1;
+                                inputDir.y = 0;
+                                if (soundOnOff === 'On') {
+                                    turnSound.play();
+                                }
+    
+                                break;
+                            case 'right':
+                                inputDir.x = 1;
+                                inputDir.y = 0;
+                                if (soundOnOff === 'On') {
+                                    turnSound.play();
+                                }
+    
+    
+                                break;
+    
+                            default:
+                                break;
+                        }
                     }
-                }
-            })
-        }, false)
+                })
+            }, false)
+
+           
+        })
+
+
+
+
+
+
+
+
+       
 
         function swipedetect(el, callback) {
 

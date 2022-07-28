@@ -18,6 +18,12 @@ if (screen.width > 600) {
     playGame.addEventListener('click', startGame);
     plAgain.addEventListener('click', startGame);
 
+    // Preloader function 
+    function onloadf() {
+        prelaoder = document.querySelector('.preloader');
+        prelaoder.style.display = 'none'
+    }
+
     function startGame() {
 
         if (soundOnOff === 'On') {

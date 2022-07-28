@@ -12,6 +12,22 @@
     align-items: center;
     justify-content: center;
 }
+.preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.preloaderGif{
+    height: 40vh;
+}
+
 #home{
     display: flex;
     flex-direction: column;

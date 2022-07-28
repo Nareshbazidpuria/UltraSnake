@@ -1,3 +1,7 @@
+function onloadf() {
+    prelaoder = document.querySelector('.preloader');
+    prelaoder.style.display = 'none'
+}
 if (screen.width > 600) {
     // constants and variables
 
@@ -19,10 +23,7 @@ if (screen.width > 600) {
     plAgain.addEventListener('click', startGame);
 
     // Preloader function 
-    function onloadf() {
-        prelaoder = document.querySelector('.preloader');
-        prelaoder.style.display = 'none'
-    }
+
 
     function startGame() {
 
